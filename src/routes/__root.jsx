@@ -1,5 +1,6 @@
 import { createRootRoute, Outlet, ScrollRestoration } from '@tanstack/react-router';
 import { SpeedInsights } from '@vercel/speed-insights/react';
+import { Analytics } from '@vercel/analytics/react';
 
 export const Route = createRootRoute({
   component: RootComponent,
@@ -17,6 +18,7 @@ function RootComponent() {
         <Outlet />
         <ScrollRestoration />
         <SpeedInsights />
+        <Analytics />
         <script type="module" src="/@vite/client"></script>
       </body>
     </html>
